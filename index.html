@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonymous Mental Health Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Anonymous Mental Health Support</h1>
+      <p class="tagline">You're not alone. Talk anonymously with others who understand.</p>
+      <div class="user-info">
+        <p>Your anonymous ID: <span id="user-id">connecting...</span></p>
+        <div class="mood-selector">
+          <label for="mood">How are you feeling?</label>
+          <select id="mood">
+            <option value="">Select mood</option>
+            <option value="😊 Okay">😊 Okay</option>
+            <option value="😕 Anxious">😕 Anxious</option>
+            <option value="😔 Depressed">😔 Depressed</option>
+            <option value="😣 Stressed">😣 Stressed</option>
+            <option value="😌 Calm">😌 Calm</option>
+            <option value="😢 Sad">😢 Sad</option>
+            <option value="😡 Angry">😡 Angry</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="chat-container">
+        <div id="messages" class="messages"></div>
+        <div class="message-input">
+          <input type="text" id="message-input" placeholder="Type your message here..." autocomplete="off">
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+      
+      <div class="resources">
+        <h3>Mental Health Resources</h3>
+        <ul id="resources-list">
+          <li>Loading resources...</li>
+        </ul>
+      </div>
+    </main>
+    
+    <footer>
+      <p>This is an anonymous chat. Please be kind and respectful to others.</p>
+      <p>If you're in crisis, please contact professional help.</p>
+    </footer>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
