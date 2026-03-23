@@ -44,6 +44,14 @@ key value.pem
 
 chmod 400 key_value.pem
 
+//ssh → connect to another computer
+
+//-i key_value.pem → use your secret key
+
+//ubuntu@ipaddress → login as "ubuntu user" to that machine
+
+//now we are inside cloud computing
+
 ssh -i key_value.pem ubuntu@ipaddress
 
 sudo apt update -y
